@@ -10,7 +10,7 @@ public class MyApp {
 		BusTransportation transportation = context.getBean("busTransportation", BusTransportation.class);
 		
 		System.out.println(transportation.getRideTransportation());
-		System.out.println(transportation.getEmail) + ;
+		System.out.println(transportation.getColor());
 		
 		context.close();
 

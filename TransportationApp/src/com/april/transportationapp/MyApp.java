@@ -15,7 +15,7 @@ public class MyApp {
 		BicycleTransportation bicycleTransportation = (BicycleTransportation)transportation;
 		System.out.println(bicycleTransportation.getWheel().getWheels());
 		System.out.println(bicycleTransportation.getName());
-		System.out.println(bicycleTransportation.getEmail());
+		System.out.println(bicycleTransportation.getColor());
 		
 		//bean scope
 		BicycleTransportation transportation1 = context.getBean("myTransportation", BicycleTransportation.class);

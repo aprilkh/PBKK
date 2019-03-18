@@ -16,11 +16,11 @@
     	
     	<!-- Setter injection -->
     	<property name="wheel" ref="myWheel"></property>
-    	<!--  <property name="name" value="Navinda Meutia"></property> -->
-    	<!--  <property name="email" value="nm.dashj@gmail.com"></property> -->
+    	<!--  <property name="name" value="Tayo"></property> -->
+    	<!--  <property name="color" value="blue"></property> -->
     	
     	<property name="name" value="${test.name}"></property>
-    	<property name="email" value="${test.email}"></property>
+    	<property name="email" value="${test.color}"></property>
     </bean>
     
     <!-- Dont forget to add 1)prefix 2)schema loc -->
@@ -28,8 +28,8 @@
     
     <!-- scope proto : jika bekerja dgn banyak org -->
     <bean id="myTransportationPrototype" class="com.april.transportationapp.BicycleTransportation" scope="prototype">
-    	<property name="name" value="Testtt"></property>
-    	<property name="email" value="test@emaol"></property>
+    	<property name="name" value="Tayo"></property>
+    	<property name="color" value="blue"></property>
     </bean>
     
     

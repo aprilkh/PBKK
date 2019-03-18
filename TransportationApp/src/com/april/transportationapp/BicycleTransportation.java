@@ -3,7 +3,7 @@ package com.april.transportationapp;
 public class BicycleTransportation implements Transportation{
 	private Wheel wheel;
 	private String name;
-	private String email;
+	private String color;
 	
 	@Override
 	public void getRideTransportation() {
@@ -11,11 +11,11 @@ public class BicycleTransportation implements Transportation{
 		System.out.println("Ride for 5 km!");
 	}
 	
-	public BicycleTransportation(Wheel wheel, String name, String email) {
+	public BicycleTransportation(Wheel wheel, String name, String color) {
 		super();
 		this.wheel = wheel;
 		this.name = name;
-		this.email = email;
+		this.color = color;
 	}
 	
 	public String getName() {
@@ -26,12 +26,12 @@ public class BicycleTransportation implements Transportation{
 		this.name = name;
 	}
 	
-	public String getEmail() {
-		return email;
+	public String getColor() {
+		return color;
 	}
 	
-	public void setEmail(String email) {
-		this.email = email;
+	public void setEmail(String color) {
+		this.color = color;
 	}
 	
 	public BicycleTransportation() {
