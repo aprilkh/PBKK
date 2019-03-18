@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd 
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean id="myWheel" class="com.april.transportationapp.FourWheel">	
+    </bean>
+    
+    <bean id="myTransportation" class="com.april.transportationapp.BicycleTransportation">  
+    	<!-- dependency injection --> 
+    	<!-- <constructor-arg ref="myWheel"></constructor-arg>    -->
+    	
+    	<!-- Setter injection -->
+    	<property name="wheel" ref="myWheel"></property>
+    	<!--  <property name="name" value="Navinda Meutia"></property> -->
+    	<!--  <property name="email" value="nm.dashj@gmail.com"></property> -->
+    	
+    	<property name="name" value="${test.name}"></property>
+    	<property name="email" value="${test.email}"></property>
+    </bean>
+    
+    <!-- Dont forget to add 1)prefix 2)schema loc -->
+    <context:property-placeholder location="classpath:sport.properties"/>
+    
+    <!-- scope proto : jika bekerja dgn banyak org -->
+    <bean id="myTransportationPrototype" class="com.april.transportationapp.BicycleTransportation" scope="prototype">
+    	<property name="name" value="Testtt"></property>
+    	<property name="email" value="test@emaol"></property>
+    </bean>
+    
+    
+</beans>
